@@ -10,13 +10,13 @@ import UIKit
 
 public class UserData: NSObject {
  // if you need more value please add here
-    var id        :String = ""
-    var name      :String = ""
-    var firstName :String = ""
-    var lastName  :String = ""
-    var email     :String = ""
-    var gender    :String = ""
-    var birthday  :String = ""
-    var about     :String = ""
+    public var id        :String = ""
+    public var name      :String = ""
+    public var firstName :String = ""
+    public var lastName  :String = ""
+    public var email     :String = ""
+    public var gender    :String = ""
+    public var birthday  :String = ""
+    public var about     :String = ""
     
 }

@@ -28,6 +28,11 @@ Import two files in your project and it's done
 6. Congratulations!
 
 ## Usage example
+##### Developer must have to call function from appdelegate didFinishlaunching.
+
+```swift
+    LoginManager.shared.facebookConfiguration(application, didFinishLaunchingWithOptions: launchOptions)
+```
 
 ##### Developer must have to implement open url method in appdelegate file.
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserData: NSObject {
+public class UserData: NSObject {
  // if you need more value please add here
     var id        :String = ""
     var name      :String = ""

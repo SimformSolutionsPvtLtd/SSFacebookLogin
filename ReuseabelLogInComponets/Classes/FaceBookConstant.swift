@@ -9,7 +9,7 @@
 import UIKit
 
 //Basic permissions, (public_profile, user_friends, and email) do not require Review, but all other permissions do.
-enum ReadPermissions :String {
+public enum ReadPermissions :String {
     case email                    =  "email"
     case publicProfile            =  "public_profile"
     case readCustomFriendlists    =  "read_custom_friendlists"
@@ -25,7 +25,7 @@ enum ReadPermissions :String {
     case userWorkHistory          =  "user_work_history"
 }
 
-enum NeededFields:String {
+public enum NeededFields:String {
     case id                             = "id"                                  // user id
     case email                          = "email"                               /* The person's primary email address listed on their profile. This
                                                                                    field will not be returned if no valid email address is available */
@@ -95,12 +95,12 @@ enum NeededFields:String {
     case inspirational_people           = "inspirational_people"                // list, The person's inspirational people
 }
 
-struct Error {
+public struct Error {
     static let facebookNoResult:NSError = NSError(domain: "login", code:998 , userInfo: [NSLocalizedDescriptionKey:"Facebook Permissions Result",                                                                                                              NSLocalizedFailureReasonErrorKey:"No Facebook Permissions not Received"])
     static let facebookPermissions:NSError = NSError(domain: "login", code: 999, userInfo: [NSLocalizedDescriptionKey:"Facebook Permissions",                                                                                                         NSLocalizedFailureReasonErrorKey:"app requires you to provide additional Facebook Permissions in order to create or use a fb account.  This information is used to create fuller profiles, verify authenticity, and provide support"])
 }
 
-class FacebookConstante: NSObject {
+public class FacebookConstante: NSObject {
 
     
     static let readPermissions = ["public_profile","email","user_friends"]

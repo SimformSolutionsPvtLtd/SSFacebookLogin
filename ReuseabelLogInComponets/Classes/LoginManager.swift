@@ -9,28 +9,21 @@
 import UIKit
 import FBSDKLoginKit
 
-class LoginManager: NSObject {
+public class LoginManager: NSObject {
     
-    
-    struct Static {
-        static let instance = LoginManager()
-    }
-    
-    class var shared: LoginManager {
-        return Static.instance
-    }
+    public static let shared = LoginManager()
     
     let facebookManger = FBSDKLoginManager()
     
-    func facebookConfiguration(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)  {
+    public func facebookConfiguration(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)  {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    func facebookUrlConfiguration(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    public func facebookUrlConfiguration(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
-    func loginWithFacebook(permission:[ReadPermissions]? = nil,requriedFields:[NeededFields]? = nil,controller:UIViewController,_ loginCompletion:@escaping (FBSDKAccessToken?, NSError?)->(),_ userDatacompletion:@escaping(AnyObject?, NSError?)->Void)  {
+    public func loginWithFacebook(permission:[ReadPermissions]? = nil,requriedFields:[NeededFields]? = nil,controller:UIViewController,_ loginCompletion:@escaping (FBSDKAccessToken?, NSError?)->(),_ userDatacompletion:@escaping(AnyObject?, NSError?)->Void)  {
         
         facebookManger.logIn(withReadPermissions:getReadPermission(readPermission: permission), from: controller) { (result, error) in
             if let unwrappedError = error {

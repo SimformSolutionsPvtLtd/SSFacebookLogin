@@ -18,5 +18,5 @@ public class UserData: NSObject {
     public var gender    :String = ""
     public var birthday  :String = ""
     public var about     :String = ""
-    
+    public var photoUrl  :String = ""
 }

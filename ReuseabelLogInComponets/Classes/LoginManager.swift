@@ -121,6 +121,14 @@ public class LoginManager: NSObject {
         if let id = dataResponse.object(forKey: NeededFields.id.rawValue) as? String {
            userData.id = id
         }
+        if let picture = dataResponse.object(forKey: NeededFields.picture.rawValue) as? NSDictionary {
+            
+            if let data = picture.value(forKey: "data") as? NSDictionary {
+                
+                userData.photoUrl = data.value(forKey:"url") as! String
+                
+            }
+        }
 
         return userData
     }

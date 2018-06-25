@@ -23,6 +23,10 @@ public class LoginManager: NSObject {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
+    public func faceboolUrlConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url , options: options)
+    }
+    
     public func loginWithFacebook(permission:[ReadPermissions]? = nil,requriedFields:[NeededFields]? = nil,controller:UIViewController,_ loginCompletion:@escaping (FBSDKAccessToken?, NSError?)->(),_ userDatacompletion:@escaping(AnyObject?, NSError?)->Void)  {
         
         facebookManger.logIn(withReadPermissions:getReadPermission(readPermission: permission), from: controller) { (result, error) in

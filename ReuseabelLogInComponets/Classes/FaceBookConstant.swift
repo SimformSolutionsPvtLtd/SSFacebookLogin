@@ -19,6 +19,7 @@ public enum ReadPermissions :String {
     case userFriends              =  "user_friends"
     case userHometown             =  "user_hometown"
     case userLocation             =  "user_location"
+    case userGender               =  "user_gender"
     case userRelationshipDetails  =  "user_relationship_details"
     case userRelationships        =  "user_relationships"
     case userReligionPolitics     =  "user_religion_politics"

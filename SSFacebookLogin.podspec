@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.source_files = 'ReuseabelLogInComponets/Classes/*.swift'
 
-    s.dependency 'FBSDKLoginKit', '4.30.0'
+    s.dependency 'FBSDKLoginKit', '4.40.0'
 
   
 end

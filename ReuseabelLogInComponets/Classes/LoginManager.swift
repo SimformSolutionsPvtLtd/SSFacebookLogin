@@ -15,7 +15,7 @@ public class LoginManager: NSObject {
     
     let facebookManger = FBSDKLoginManager()
     
-    public func facebookConfiguration(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.UIApplication.LaunchOptionsKey: Any]?)  {
+    public func facebookConfiguration(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)  {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
@@ -24,7 +24,7 @@ public class LoginManager: NSObject {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
-    public func faceboolUrlConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplication.UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    public func faceboolUrlConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(app, open: url , options: options)
     }
     
@@ -94,8 +94,8 @@ public class LoginManager: NSObject {
     }
     
     private func showPopUp(viewController:UIViewController) {
-        let alert = UIAlertController(title: "Permissions Declined", message: "please give all permissions needed to sigup user", preferredStyle: UIAlertController.UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.UIAlertAction.Style.default, handler: nil))
+        let alert = UIAlertController(title: "Permissions Declined", message: "please give all permissions needed to sigup user", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
         viewController.present(alert, animated: true, completion: nil)
     }
     

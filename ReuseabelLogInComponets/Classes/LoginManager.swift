@@ -13,24 +13,24 @@ public class LoginManager: NSObject {
     
     public static let shared = LoginManager()
     
-    let facebookManger = FBSDKLoginManager()
+    let facebookManger = FBSDKLoginKit.LoginManager()
     
     public func facebookConfiguration(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)  {
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     
     public func facebookUrlConfiguration(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        return ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
     public func faceboolUrlConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url , options: options)
+        return ApplicationDelegate.shared.application(app, open: url , options: options)
     }
     
-    public func loginWithFacebook(permission:[ReadPermissions]? = nil,requriedFields:[NeededFields]? = nil,controller:UIViewController,_ loginCompletion:@escaping (FBSDKAccessToken?, NSError?)->(),_ userDatacompletion:@escaping(AnyObject?, NSError?)->Void)  {
+    public func loginWithFacebook(permission:[ReadPermissions]? = nil,requriedFields:[NeededFields]? = nil,controller:UIViewController,_ loginCompletion:@escaping (AccessToken?, NSError?)->(),_ userDatacompletion:@escaping(AnyObject?, NSError?)->Void)  {
         
-        facebookManger.logIn(withReadPermissions:getReadPermission(readPermission: permission), from: controller) { (result, error) in
+        facebookManger.logIn(permissions: getReadPermission(readPermission: permission), from: controller) { (result, error) in
             if let unwrappedError = error {
                 self.facebookManger.logOut()
                 loginCompletion(nil,unwrappedError as NSError?)
@@ -43,8 +43,8 @@ public class LoginManager: NSObject {
                     return
                 }
                 if uResult.declinedPermissions.count == 0 {
-                    if let _ = uResult.token.tokenString {
-                        FBSDKGraphRequest.init(graphPath: "me", parameters:["fields":self.getNeededFields(requiredPermission: requriedFields)] ).start(completionHandler: { (connection, response, meError) in
+                    if let _ = uResult.token?.tokenString {
+                        GraphRequest.init(graphPath: "me", parameters:["fields":self.getNeededFields(requiredPermission: requriedFields)] ).start(completionHandler: { (connection, response, meError) in
                             if let unwrappedMeError = meError {
                                 userDatacompletion(nil,unwrappedMeError as NSError?)
                             }else{

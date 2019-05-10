@@ -1,34 +1,33 @@
 PODS:
-  - Bolts (1.9.0):
-    - Bolts/AppLinks (= 1.9.0)
-    - Bolts/Tasks (= 1.9.0)
-  - Bolts/AppLinks (1.9.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.0)
-  - FBSDKCoreKit (4.40.0):
-    - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.40.0):
-    - FBSDKCoreKit
-  - SSFacebookLogin (5.0.4):
-    - FBSDKCoreKit (= 4.40.0)
-    - FBSDKLoginKit (= 4.40.0)
+  - FBSDKCoreKit (5.0.0):
+    - FBSDKCoreKit/Basics (= 5.0.0)
+    - FBSDKCoreKit/Core (= 5.0.0)
+  - FBSDKCoreKit/Basics (5.0.0)
+  - FBSDKCoreKit/Core (5.0.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.0.0):
+    - FBSDKCoreKit (= 5.0.0)
+  - SSFacebookLogin (5.0.5):
+    - FBSDKCoreKit (= 5.0.0)
+    - FBSDKLoginKit (= 5.0.0)
 
 DEPENDENCIES:
-  - SSFacebookLogin
+  - SSFacebookLogin (from `/Users/Ketan.Chopda/Desktop/SimformWork/SSFacebookLogin/`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Bolts
     - FBSDKCoreKit
     - FBSDKLoginKit
-    - SSFacebookLogin
+
+EXTERNAL SOURCES:
+  SSFacebookLogin:
+    :path: "/Users/Ketan.Chopda/Desktop/SimformWork/SSFacebookLogin/"
 
 SPEC CHECKSUMS:
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
-  FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
-  SSFacebookLogin: b879f64a86ed8560483420dd554e9ae20bf98b65
+  FBSDKCoreKit: ba361d4a9d4dc29ff218822b849b22d4f869c7bb
+  FBSDKLoginKit: c6d0dc187bd076e370dffa10f7fc8a3562a6892c
+  SSFacebookLogin: c5b12f3cd397b74461e5b99af0dc0d1c6a2fff87
 
-PODFILE CHECKSUM: fe6c5efe440fad2625c14ecded9b20380dc49842
+PODFILE CHECKSUM: 5aa129921951f7ec12a998159a7393aa129d35d2
 
 COCOAPODS: 1.6.1

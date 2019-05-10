@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SSFacebookLogin'
-  s.version          = '5.0.5'
+  s.version          = '5.0.6'
   s.summary          = 'The Reusable Facebook Login Components for iOS is the easiest way to get data from Facebook.'
  
   s.description      = 'The Reusable Facebook Login Components for iOS is the easiest way to get data from Facebook.'
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.source_files = 'ReuseabelLogInComponets/Classes/*.swift'
 
-  s.dependency 'FBSDKLoginKit', '4.40.0'
-  s.dependency 'FBSDKCoreKit', '4.40.0'
+  s.dependency 'FBSDKLoginKit', '5.0.0'
+  s.dependency 'FBSDKCoreKit', '5.0.0'
 
   
 end

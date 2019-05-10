@@ -104,7 +104,7 @@ public struct Error {
 public class FacebookConstante: NSObject {
 
     
-    static let readPermissions = ["public_profile","email","user_friends"]
+    static let readPermissions = ["public_profile","email"]
     
     static let neededFields = "id, name, first_name, last_name, picture, email, gender, birthday,about"
     

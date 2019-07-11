@@ -14,9 +14,6 @@
 		0C280B9920510F99008912DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C280B9820510F99008912DD /* Assets.xcassets */; };
 		0C280B9C20510F99008912DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C280B9A20510F99008912DD /* LaunchScreen.storyboard */; };
 		0C3158B02063BA7500720140 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3158AF2063BA7500720140 /* README.md */; };
-		2ACFC991206CF681000D9D46 /* FaceBookConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACFC98E206CF681000D9D46 /* FaceBookConstant.swift */; };
-		2ACFC992206CF681000D9D46 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACFC98F206CF681000D9D46 /* LoginManager.swift */; };
-		2ACFC993206CF681000D9D46 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACFC990206CF681000D9D46 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +26,6 @@
 		0C280B9D20510F99008912DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C3158AF2063BA7500720140 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		18B2EF33C6EDDEB0B70F6696 /* Pods-ReuseabelLogInComponetsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponetsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponetsTests/Pods-ReuseabelLogInComponetsTests.release.xcconfig"; sourceTree = "<group>"; };
-		2ACFC98E206CF681000D9D46 /* FaceBookConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceBookConstant.swift; sourceTree = "<group>"; };
-		2ACFC98F206CF681000D9D46 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
-		2ACFC990206CF681000D9D46 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3C829050F931CBFCA902E23E /* Pods_ReuseabelLogInComponetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReuseabelLogInComponetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43028945DCC67E98058EFF32 /* Pods-ReuseabelLogInComponets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponets/Pods-ReuseabelLogInComponets.debug.xcconfig"; sourceTree = "<group>"; };
 		64125DE153429F5B9551BBF5 /* Pods-ReuseabelLogInComponetsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponetsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponetsTests/Pods-ReuseabelLogInComponetsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +69,6 @@
 		0C280B9020510F99008912DD /* ReuseabelLogInComponets */ = {
 			isa = PBXGroup;
 			children = (
-				2ACFC98D206CF681000D9D46 /* Classes */,
 				0C280B9120510F99008912DD /* AppDelegate.swift */,
 				0C280B9320510F99008912DD /* ViewController.swift */,
 				0C280B9520510F99008912DD /* Main.storyboard */,
@@ -85,16 +78,6 @@
 				0C3158AF2063BA7500720140 /* README.md */,
 			);
 			path = ReuseabelLogInComponets;
-			sourceTree = "<group>";
-		};
-		2ACFC98D206CF681000D9D46 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				2ACFC98E206CF681000D9D46 /* FaceBookConstant.swift */,
-				2ACFC98F206CF681000D9D46 /* LoginManager.swift */,
-				2ACFC990206CF681000D9D46 /* UserData.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		6D3D20AD5F4282B3B4EF9E3C /* Frameworks */ = {
@@ -241,9 +224,6 @@
 			files = (
 				0C280B9420510F99008912DD /* ViewController.swift in Sources */,
 				0C280B9220510F99008912DD /* AppDelegate.swift in Sources */,
-				2ACFC993206CF681000D9D46 /* UserData.swift in Sources */,
-				2ACFC992206CF681000D9D46 /* LoginManager.swift in Sources */,
-				2ACFC991206CF681000D9D46 /* FaceBookConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

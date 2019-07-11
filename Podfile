@@ -6,6 +6,6 @@ target 'ReuseabelLogInComponets' do
   use_frameworks!
 
   # Pods for ReuseabelLogInComponets
-  pod 'SSFacebookLogin'
+  pod 'SSFacebookLogin', :path => './'
 
 end

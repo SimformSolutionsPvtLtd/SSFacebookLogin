@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SSFacebookLogin'
-  s.version          = '6.0.0'
+  s.version          = '6.0.1'
   s.summary          = 'The Reusable Facebook Login Components for iOS is the easiest way to get data from Facebook.'
  
   s.description      = 'The Reusable Facebook Login Components for iOS is the easiest way to get data from Facebook.'
@@ -11,10 +11,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/simformsolutions/SSFacebookLogin.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '10.0'
-  s.source_files = 'ReuseabelLogInComponets/Classes/*.swift'
+  s.source_files = 'Classes'
 
-  s.dependency 'FBSDKLoginKit', '5.0.0'
-  s.dependency 'FBSDKCoreKit', '5.0.0'
+  s.dependency 'FBSDKLoginKit', '5.2.1'
+  s.dependency 'FBSDKCoreKit', '5.2.1'
 
   
 end

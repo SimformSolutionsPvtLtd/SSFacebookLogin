@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SSFacebookLogin
 
 class ViewController: UIViewController {
 

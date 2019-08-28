@@ -1,15 +1,15 @@
 PODS:
-  - FBSDKCoreKit (5.2.1):
-    - FBSDKCoreKit/Basics (= 5.2.1)
-    - FBSDKCoreKit/Core (= 5.2.1)
-  - FBSDKCoreKit/Basics (5.2.1)
-  - FBSDKCoreKit/Core (5.2.1):
+  - FBSDKCoreKit (5.4.1):
+    - FBSDKCoreKit/Basics (= 5.4.1)
+    - FBSDKCoreKit/Core (= 5.4.1)
+  - FBSDKCoreKit/Basics (5.4.1)
+  - FBSDKCoreKit/Core (5.4.1):
     - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.2.1):
+  - FBSDKLoginKit (5.4.1):
     - FBSDKCoreKit (~> 5.0)
   - SSFacebookLogin (6.0.1):
-    - FBSDKCoreKit (= 5.2.1)
-    - FBSDKLoginKit (= 5.2.1)
+    - FBSDKCoreKit (= 5.4.1)
+    - FBSDKLoginKit (= 5.4.1)
 
 DEPENDENCIES:
   - SSFacebookLogin (from `./`)
@@ -24,10 +24,10 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  FBSDKCoreKit: e1ab8d86f5eea2d7aa6ab12acca3e1d2dcb11983
-  FBSDKLoginKit: 6e20e44775ddf4b159a8ca676834325e13d12221
-  SSFacebookLogin: bfa859722f4cc3224f8f5c31f96160d32dae1fa8
+  FBSDKCoreKit: 5144671077d67f07d7d243dbc7fd57a171f73954
+  FBSDKLoginKit: ff38b353b6843353f090028eb1b895c78aa82796
+  SSFacebookLogin: 81b707209bf46ea9a37789c3f748d090724f9484
 
 PODFILE CHECKSUM: 0c3f6bca4fd83e7fd72fccd4d940762bf6f21c97
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.7.5

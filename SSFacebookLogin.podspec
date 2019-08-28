@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.source_files = 'Classes'
 
-  s.dependency 'FBSDKLoginKit', '5.2.1'
-  s.dependency 'FBSDKCoreKit', '5.2.1'
+  s.dependency 'FBSDKLoginKit', '5.4.1'
+  s.dependency 'FBSDKCoreKit', '5.4.1'
 
   
 end

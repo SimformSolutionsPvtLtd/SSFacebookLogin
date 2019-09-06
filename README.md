@@ -29,9 +29,7 @@ Import two files in your project and it's done
 
 ## Migration Guide
 - Developer must Use version 6.0.3 or lower for support of iOS 10.0.
-- Developer must Use version 6.0.4 or lower for support of iOS 11.0.
 - For minimum iOS target 11.0 use 6.0.4.
-- For minimum iOS target 12.0 use 6.0.6.
 
 ## Usage example
 ##### Developer must have to call function from appdelegate didFinishlaunching.

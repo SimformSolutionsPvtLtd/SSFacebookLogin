@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
 
 
   s.dependency 'FBSDKLoginKit', '5.11.1'
-  s.dependency 'FBSDKCoreKit', '5.11.1'
+  s.dependency 'FBSDKCoreKit', '5.12.0'
 
 end

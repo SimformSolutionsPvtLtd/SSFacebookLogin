@@ -13,10 +13,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/simformsolutions/SSFacebookLogin.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '12.0'
-  s.source_files = 'Classes'
+  s.source_files = 'Sources/SSFacebookLogin/*.swift'
 
 
-  s.dependency 'FBSDKLoginKit', '5.11.1'
-  s.dependency 'FBSDKCoreKit', '5.11.1'
+  s.dependency 'Facebook', '14.1.0'
 
 end

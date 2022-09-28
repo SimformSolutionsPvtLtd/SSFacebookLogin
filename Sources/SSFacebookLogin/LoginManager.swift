@@ -44,17 +44,20 @@ public class LoginManager: NSObject {
                 }
                 if uResult.declinedPermissions.count == 0 {
                     if let _ = uResult.token?.tokenString {
-                        GraphRequest.init(graphPath: "me", parameters:["fields":self.getNeededFields(requiredPermission: requriedFields)] ).start(completionHandler: { (connection, response, meError) in
-                            if let unwrappedMeError = meError {
-                                userDatacompletion(nil,unwrappedMeError as NSError?)
-                            }else{
-                                if requriedFields == nil {
-                                  userDatacompletion(self.parseUserData(dataResponse: response as AnyObject),nil)
-                                  return
-                                }
-                                userDatacompletion(response as AnyObject?,nil)
+                        
+                        GraphRequest.init(graphPath: "me", parameters: ["fields" : self.getNeededFields(requiredPermission: requriedFields)]).start { connection, response, meError in
+                            
+                            guard let _ = meError else {
+                                userDatacompletion(nil, meError as NSError?)
+                                return
                             }
-                        })
+                            
+                            if requriedFields == nil {
+                                userDatacompletion(self.parseUserData(dataResponse: response as AnyObject), nil)
+                                return
+                            }
+                            userDatacompletion(response as AnyObject?, nil)
+                        }
                     }
                     loginCompletion(uResult.token, nil)
                 } else {
@@ -68,7 +71,7 @@ public class LoginManager: NSObject {
     private func getReadPermission(readPermission:[ReadPermissions]?) -> [String] {
         var permissionString:[String] = [String]()
         if readPermission == nil {
-           return FacebookConstante.readPermissions
+            return FacebookConstante.readPermissions
         } else {
             for value in readPermission! {
                 permissionString.append(value.rawValue)
@@ -103,28 +106,28 @@ public class LoginManager: NSObject {
         let userData = UserData()
         
         if let about = dataResponse.object(forKey: NeededFields.about.rawValue) as? String {
-           userData.about = about
+            userData.about = about
         }
         if let birthday = dataResponse.object(forKey: NeededFields.birthday.rawValue) as? String {
-           userData.birthday = birthday
+            userData.birthday = birthday
         }
         if let email = dataResponse.object(forKey: NeededFields.email.rawValue) as? String {
-           userData.email = email
+            userData.email = email
         }
         if let firstName = dataResponse.object(forKey: NeededFields.firstName.rawValue) as? String {
-           userData.firstName = firstName
+            userData.firstName = firstName
         }
         if let lastName = dataResponse.object(forKey: NeededFields.lastName.rawValue) as? String {
-           userData.lastName = lastName
+            userData.lastName = lastName
         }
         if let gender = dataResponse.object(forKey: NeededFields.gender.rawValue) as? String {
-           userData.gender = gender
+            userData.gender = gender
         }
         if let name = dataResponse.object(forKey: NeededFields.name.rawValue) as? String {
-           userData.name = name
+            userData.name = name
         }
         if let id = dataResponse.object(forKey: NeededFields.id.rawValue) as? String {
-           userData.id = id
+            userData.id = id
         }
         if let picture = dataResponse.object(forKey: NeededFields.picture.rawValue) as? NSDictionary {
             
@@ -134,7 +137,7 @@ public class LoginManager: NSObject {
                 
             }
         }
-
+        
         return userData
     }
     

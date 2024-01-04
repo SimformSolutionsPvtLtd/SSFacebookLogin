@@ -1,24 +1,24 @@
 PODS:
-  - FBSDKCoreKit (5.7.0):
-    - FBSDKCoreKit/Basics (= 5.7.0)
-    - FBSDKCoreKit/Core (= 5.7.0)
-  - FBSDKCoreKit/Basics (5.7.0)
-  - FBSDKCoreKit/Core (5.7.0):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.7.0):
-    - FBSDKLoginKit/Login (= 5.7.0)
-  - FBSDKLoginKit/Login (5.7.0):
-    - FBSDKCoreKit (~> 5.0)
-  - SSFacebookLogin (6.0.5):
-    - FBSDKCoreKit (= 5.7.0)
-    - FBSDKLoginKit (= 5.7.0)
+  - FBAEMKit (16.3.1):
+    - FBSDKCoreKit_Basics (= 16.3.1)
+  - FBSDKCoreKit (16.3.1):
+    - FBAEMKit (= 16.3.1)
+    - FBSDKCoreKit_Basics (= 16.3.1)
+  - FBSDKCoreKit_Basics (16.3.1)
+  - FBSDKLoginKit (16.3.1):
+    - FBSDKCoreKit (= 16.3.1)
+  - SSFacebookLogin (7.0.0):
+    - FBSDKCoreKit (= 16.3.1)
+    - FBSDKLoginKit (= 16.3.1)
 
 DEPENDENCIES:
   - SSFacebookLogin (from `./`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - FBAEMKit
     - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
     - FBSDKLoginKit
 
 EXTERNAL SOURCES:
@@ -26,10 +26,12 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  FBSDKCoreKit: 0d2d450fe9447e204fa6e912e0df76dd36693699
-  FBSDKLoginKit: 4127e8260b96e0e4cc8ba0c10c95ee63941aa24a
-  SSFacebookLogin: 6d89fc99c22878acbbe3f5c7d97a5f80f8a71bda
+  FBAEMKit: 6c7b5eb77c96861bb59e040842c6e55bf39512ce
+  FBSDKCoreKit: 5e4dd478947ab1bcc887e8cfadeae0727af1a942
+  FBSDKCoreKit_Basics: cd7b5f5d1e8868c26706917919d058999ca672c3
+  FBSDKLoginKit: 572cca0bc6c90067ef197187697cb3b584310c52
+  SSFacebookLogin: dd2845e799e135ad37056d72a3762e13ef35da72
 
-PODFILE CHECKSUM: 768c6a449025f43280a39811a8a1a3c0a4fab379
+PODFILE CHECKSUM: 2f941ec580e755e570263a4a0dced88885d5cbcc
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.14.3

@@ -19,11 +19,6 @@ public class LoginManager: NSObject {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    
-    public func facebookUrlConfiguration(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
-    
     public func faceboolUrlConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return ApplicationDelegate.shared.application(app, open: url , options: options)
     }
@@ -44,7 +39,7 @@ public class LoginManager: NSObject {
                 }
                 if uResult.declinedPermissions.count == 0 {
                     if let _ = uResult.token?.tokenString {
-                        GraphRequest.init(graphPath: "me", parameters:["fields":self.getNeededFields(requiredPermission: requriedFields)] ).start(completionHandler: { (connection, response, meError) in
+                        GraphRequest.init(graphPath: "me", parameters:["fields":self.getNeededFields(requiredPermission: requriedFields)] ).start(completion: { (connection, response, meError) in
                             if let unwrappedMeError = meError {
                                 userDatacompletion(nil,unwrappedMeError as NSError?)
                             }else{

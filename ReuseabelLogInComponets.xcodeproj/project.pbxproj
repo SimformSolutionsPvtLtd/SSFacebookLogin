@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B514932D3D80DD54BDF42A /* Pods_ReuseabelLogInComponets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4DC66B43117D6AAB54A0E5 /* Pods_ReuseabelLogInComponets.framework */; };
 		0C280B9220510F99008912DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C280B9120510F99008912DD /* AppDelegate.swift */; };
 		0C280B9420510F99008912DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C280B9320510F99008912DD /* ViewController.swift */; };
 		0C280B9720510F99008912DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C280B9520510F99008912DD /* Main.storyboard */; };
 		0C280B9920510F99008912DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C280B9820510F99008912DD /* Assets.xcassets */; };
 		0C280B9C20510F99008912DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C280B9A20510F99008912DD /* LaunchScreen.storyboard */; };
 		0C3158B02063BA7500720140 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3158AF2063BA7500720140 /* README.md */; };
-		7DF670EFDADB839D8E7026FE /* Pods_ReuseabelLogInComponets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81585226F73E4CD977C490C9 /* Pods_ReuseabelLogInComponets.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,15 @@
 		0C280B9B20510F99008912DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C280B9D20510F99008912DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C3158AF2063BA7500720140 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		51B759985B1D50E7924DF623 /* Pods-ReuseabelLogInComponets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponets.debug.xcconfig"; path = "Target Support Files/Pods-ReuseabelLogInComponets/Pods-ReuseabelLogInComponets.debug.xcconfig"; sourceTree = "<group>"; };
-		81585226F73E4CD977C490C9 /* Pods_ReuseabelLogInComponets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReuseabelLogInComponets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD825EE60921A894C3A9115B /* Pods-ReuseabelLogInComponets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponets.release.xcconfig"; path = "Target Support Files/Pods-ReuseabelLogInComponets/Pods-ReuseabelLogInComponets.release.xcconfig"; sourceTree = "<group>"; };
+		18B2EF33C6EDDEB0B70F6696 /* Pods-ReuseabelLogInComponetsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponetsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponetsTests/Pods-ReuseabelLogInComponetsTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C829050F931CBFCA902E23E /* Pods_ReuseabelLogInComponetsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReuseabelLogInComponetsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43028945DCC67E98058EFF32 /* Pods-ReuseabelLogInComponets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponets/Pods-ReuseabelLogInComponets.debug.xcconfig"; sourceTree = "<group>"; };
+		64125DE153429F5B9551BBF5 /* Pods-ReuseabelLogInComponetsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponetsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponetsTests/Pods-ReuseabelLogInComponetsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E059B969F6B8ACEBA50BB8D /* Pods-ReuseabelLogInComponets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponets.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponets/Pods-ReuseabelLogInComponets.release.xcconfig"; sourceTree = "<group>"; };
+		849344A137070E9C627DD0A9 /* Pods-ReuseabelLogInComponetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponetsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponetsUITests/Pods-ReuseabelLogInComponetsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A09D56C3B4E7A7C6D17AE2A1 /* Pods-ReuseabelLogInComponetsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReuseabelLogInComponetsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReuseabelLogInComponetsUITests/Pods-ReuseabelLogInComponetsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA4DC66B43117D6AAB54A0E5 /* Pods_ReuseabelLogInComponets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReuseabelLogInComponets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7405CF06A4A13547B9DB13B /* Pods_ReuseabelLogInComponetsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReuseabelLogInComponetsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DF670EFDADB839D8E7026FE /* Pods_ReuseabelLogInComponets.framework in Frameworks */,
+				08B514932D3D80DD54BDF42A /* Pods_ReuseabelLogInComponets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +53,8 @@
 			children = (
 				0C280B9020510F99008912DD /* ReuseabelLogInComponets */,
 				0C280B8F20510F99008912DD /* Products */,
-				49F805AD4107B15BF1EAFB1F /* Pods */,
-				9BCA0DC1A8B842A87A1C19A2 /* Frameworks */,
+				E77015E7BA38925B73D714AE /* Pods */,
+				6D3D20AD5F4282B3B4EF9E3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,22 +80,27 @@
 			path = ReuseabelLogInComponets;
 			sourceTree = "<group>";
 		};
-		49F805AD4107B15BF1EAFB1F /* Pods */ = {
+		6D3D20AD5F4282B3B4EF9E3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				51B759985B1D50E7924DF623 /* Pods-ReuseabelLogInComponets.debug.xcconfig */,
-				BD825EE60921A894C3A9115B /* Pods-ReuseabelLogInComponets.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		9BCA0DC1A8B842A87A1C19A2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				81585226F73E4CD977C490C9 /* Pods_ReuseabelLogInComponets.framework */,
+				AA4DC66B43117D6AAB54A0E5 /* Pods_ReuseabelLogInComponets.framework */,
+				E7405CF06A4A13547B9DB13B /* Pods_ReuseabelLogInComponetsTests.framework */,
+				3C829050F931CBFCA902E23E /* Pods_ReuseabelLogInComponetsUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E77015E7BA38925B73D714AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43028945DCC67E98058EFF32 /* Pods-ReuseabelLogInComponets.debug.xcconfig */,
+				7E059B969F6B8ACEBA50BB8D /* Pods-ReuseabelLogInComponets.release.xcconfig */,
+				64125DE153429F5B9551BBF5 /* Pods-ReuseabelLogInComponetsTests.debug.xcconfig */,
+				18B2EF33C6EDDEB0B70F6696 /* Pods-ReuseabelLogInComponetsTests.release.xcconfig */,
+				A09D56C3B4E7A7C6D17AE2A1 /* Pods-ReuseabelLogInComponetsUITests.debug.xcconfig */,
+				849344A137070E9C627DD0A9 /* Pods-ReuseabelLogInComponetsUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,11 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C280BB620510F99008912DD /* Build configuration list for PBXNativeTarget "ReuseabelLogInComponets" */;
 			buildPhases = (
-				07D74E8FBE557660D82971D9 /* [CP] Check Pods Manifest.lock */,
+				8CDC6FF6E81000948AA0D5D0 /* [CP] Check Pods Manifest.lock */,
 				0C280B8A20510F99008912DD /* Sources */,
 				0C280B8B20510F99008912DD /* Frameworks */,
 				0C280B8C20510F99008912DD /* Resources */,
-				777B47E84F6240BB228604FA /* [CP] Embed Pods Frameworks */,
+				E78B68DAC4EBA2E4D9DD4A91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,20 +175,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07D74E8FBE557660D82971D9 /* [CP] Check Pods Manifest.lock */ = {
+		8CDC6FF6E81000948AA0D5D0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ReuseabelLogInComponets-checkManifestLockResult.txt",
 			);
@@ -186,7 +193,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		777B47E84F6240BB228604FA /* [CP] Embed Pods Frameworks */ = {
+		E78B68DAC4EBA2E4D9DD4A91 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,13 +362,13 @@
 		};
 		0C280BB720510F99008912DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51B759985B1D50E7924DF623 /* Pods-ReuseabelLogInComponets.debug.xcconfig */;
+			baseConfigurationReference = 43028945DCC67E98058EFF32 /* Pods-ReuseabelLogInComponets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y98X8JAPH6;
 				INFOPLIST_FILE = ReuseabelLogInComponets/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simformsolutions.ReuseabelLogInComponets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,13 +379,13 @@
 		};
 		0C280BB820510F99008912DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD825EE60921A894C3A9115B /* Pods-ReuseabelLogInComponets.release.xcconfig */;
+			baseConfigurationReference = 7E059B969F6B8ACEBA50BB8D /* Pods-ReuseabelLogInComponets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y98X8JAPH6;
 				INFOPLIST_FILE = ReuseabelLogInComponets/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simformsolutions.ReuseabelLogInComponets;
 				PRODUCT_NAME = "$(TARGET_NAME)";

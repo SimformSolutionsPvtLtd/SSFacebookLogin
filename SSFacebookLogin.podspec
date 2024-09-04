@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SSFacebookLogin'
 
-  s.version          = '7.1.0'
+  s.version          = '7.2.0'
 
   s.summary          = 'The Reusable Facebook Login Components for iOS is the easiest way to get data from Facebook.'
  

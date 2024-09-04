@@ -41,6 +41,7 @@ If you prefer not to use any of the dependency managers above, you can integrate
 ## Migration Guide
 - For minimum `iOS 11.0` use `6.0.4`
 - For minimum `iOS 12.0` or above use `7.0.0`
+- For minimum `iOS 13.0` or above use `7.1.0`
 
 ## Configure App
 1. Right-click `Info.plist`, and choose **Open As ▸ Source Code**.
@@ -86,7 +87,7 @@ If you prefer not to use any of the dependency managers above, you can integrate
 
 ## Usage example
 
-##### Example 1 (Get default data of user when no any arguments passed)
+##### Example 1 (Get default data of user when no any arguments passed - use this for version 7.0.0 or below)
 
 ```swift
     LoginManager.shared.loginWithFacebook(controller: self, { (token, error) in
@@ -108,7 +109,7 @@ If you prefer not to use any of the dependency managers above, you can integrate
     }
 ```
 
-##### Example 2 (Get specific data of user by passing argument)
+##### Example 2 (Get specific data of user by passing argument - use this for version 7.0.0 or below)
 
 ```swift
 
@@ -129,6 +130,51 @@ If you prefer not to use any of the dependency managers above, you can integrate
     }
 
 ```
+
+##### Example 3 (Get specific data of user by passing argument and passing token to Firebase for using Firebase - use this for version 7.1.0)
+
+```swift
+
+    LoginManager.shared.logInWithFacebookFirebase(permission: [.email, .publicProfile, .userBirthday],
+    requriedFields: [.birthday, .about, .email],  tracking: [.limited || .enabled], controller: self, { (token, nonce, error) in
+    
+    if error == nil {
+        print(token?.userID ?? "",token?.tokenString ?? "")
+    }
+    
+    }) { (userData, error) in
+
+        if error == nil {
+            if let uResult = result  {
+                print(uResult)
+            }
+        }
+    }
+
+```
+
+##### Example 4 (Get specific data of user by passing argument with limted login option - use this for version 7.1.0)
+
+```swift
+
+    LoginManager.shared.login(permission: [.email, .publicProfile, .userBirthday],
+    requriedFields: [.birthday, .about, .email], tracking: [.limited || .enabled],controller: self, { (token, error) in
+    
+    if error == nil {
+        print("token \(token)")
+    }
+    
+    }) { (userData, error) in
+
+        if error == nil {
+            if let uResult = result  {
+                print(uResult)
+            }
+        }
+    }
+
+```
+
 ## 🤝 How to Contribute
 
 Whether you're helping us fix bugs, improve the docs, or a feature request, we'd love to have you! :muscle:

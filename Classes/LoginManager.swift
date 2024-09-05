@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import CryptoKit
 
 public class LoginManager: NSObject {
     
@@ -56,6 +57,64 @@ public class LoginManager: NSObject {
                     self.showPopUp(viewController: controller)
                     loginCompletion(uResult.token, nil)
                 }
+            }
+        }
+    }
+    
+    public func logInWithFacebookFirebase(permission:[ReadPermissions]? = nil, requriedFields:[NeededFields]? = nil, tracking: LoginTracking, controller:UIViewController,_ loginCompletion: @escaping (String?, String? ,NSError?)->(),_ userDatacompletion: @escaping(AnyObject?, NSError?)->Void) {
+        let nonce = randomNonceString()
+        facebookManger.logIn(
+            viewController: controller,
+            configuration: LoginConfiguration(permissions: getReadPermission(readPermission: permission), tracking: tracking, nonce: sha256(nonce))
+        ) { result in
+            switch result {
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                if declinedPermissions.isEmpty {
+                    if let tokenString = AuthenticationToken.current?.tokenString {
+                        loginCompletion(AuthenticationToken.current?.tokenString,nonce, nil)
+                        userDatacompletion(Profile.current as AnyObject?, nil)
+                    }
+                } else {
+                    self.showPopUp(viewController: controller)
+                    loginCompletion(AuthenticationToken.current?.tokenString, nonce, nil)
+                }
+                
+            case .failed(let error):
+                self.facebookManger.logOut()
+                loginCompletion(nil, nil, error as NSError?)
+                
+            case .cancelled:
+                self.facebookManger.logOut()
+                loginCompletion(nil, nil, nil)
+            }
+        }
+    }
+    
+    public func logIn(permission:[ReadPermissions]? = nil, requriedFields:[NeededFields]? = nil, tracking: LoginTracking, controller:UIViewController,_ loginCompletion: @escaping (String? ,NSError?)->(),_ userDatacompletion: @escaping(AnyObject?, NSError?)->Void) {
+        
+        facebookManger.logIn(
+            viewController: controller,
+            configuration: LoginConfiguration(permissions: getReadPermission(readPermission: permission), tracking: tracking)
+        ) { result in
+            switch result {
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                if declinedPermissions.isEmpty {
+                    if let tokenString = AuthenticationToken.current?.tokenString {
+                        loginCompletion(AuthenticationToken.current?.tokenString, nil)
+                        userDatacompletion(Profile.current as AnyObject?, nil)
+                    }
+                } else {
+                    self.showPopUp(viewController: controller)
+                    loginCompletion(AuthenticationToken.current?.tokenString, nil)
+                }
+                
+            case .failed(let error):
+                self.facebookManger.logOut()
+                loginCompletion(nil, error as NSError?)
+                
+            case .cancelled:
+                self.facebookManger.logOut()
+                loginCompletion(nil, nil)
             }
         }
     }
@@ -132,6 +191,40 @@ public class LoginManager: NSObject {
 
         return userData
     }
+    
+    private func randomNonceString(length: Int = 32) -> String {
+      precondition(length > 0)
+      var randomBytes = [UInt8](repeating: 0, count: length)
+      let errorCode = SecRandomCopyBytes(kSecRandomDefault, randomBytes.count, &randomBytes)
+      if errorCode != errSecSuccess {
+        fatalError(
+          "Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)"
+        )
+      }
+
+      let charset: [Character] =
+        Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+
+      let nonce = randomBytes.map { byte in
+        // Pick a random character from the set, wrapping around if needed.
+        charset[Int(byte) % charset.count]
+      }
+
+      return String(nonce)
+    }
+
+            
+    @available(iOS 13, *)
+    private func sha256(_ input: String) -> String {
+      let inputData = Data(input.utf8)
+      let hashedData = SHA256.hash(data: inputData)
+      let hashString = hashedData.compactMap {
+        String(format: "%02x", $0)
+      }.joined()
+
+      return hashString
+    }
+
     
 }
 
